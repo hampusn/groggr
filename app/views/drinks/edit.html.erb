@@ -1,0 +1,14 @@
+<h1>Editing drink</h1>
+
+<%= render 'form' %>
+
+<ul>
+<% @drink.recipes.each do |r| %>
+	<li><%= r.description %> <%= link_to 'Redigera', edit_drink_recipe_path(@drink, r) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Lägg till recept', new_drink_recipe_path(@drink) %>
+
+<%= link_to 'Show', @drink %> |
+<%= link_to 'Back', drinks_path %>

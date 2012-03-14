@@ -1,4 +1,9 @@
 Groggr::Application.routes.draw do
+  
+  resources :drinks do
+    resources :recipes
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
