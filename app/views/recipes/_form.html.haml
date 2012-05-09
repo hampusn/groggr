@@ -1,0 +1,20 @@
+= form_for([@drink, @recipe]) do |f|
+	- if @recipe.errors.any?
+		#error-explanation
+			%h2= pluralize(@recipe.errors.count, 'error') + t('prohibited this recipe from being saved') + ':'
+			
+			%ul
+				- @recipe.errors.full_messages.each do |msg|
+					%li= msg
+	
+	.field
+		= f.label :description, t('description')
+		%br
+		= f.text_field :description
+	
+	.field
+		= f.label :instruction, t('instructions')
+		%br
+		= f.text_area :instruction
+	
+	.actions= f.submit
