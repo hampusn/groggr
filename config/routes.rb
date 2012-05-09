@@ -2,6 +2,8 @@ Groggr::Application.routes.draw do
   
   root :to => 'drinks#index'
   
+  resources :items
+
   resources :drinks do
     resources :recipes
   end
