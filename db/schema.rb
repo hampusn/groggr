@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120509172740) do
+ActiveRecord::Schema.define(:version => 20120509173404) do
 
   create_table "drinks", :force => true do |t|
     t.string   "name"
@@ -21,11 +21,15 @@ ActiveRecord::Schema.define(:version => 20120509172740) do
   end
 
   create_table "ingredients", :force => true do |t|
-    t.string   "name"
-    t.string   "sb_article_number"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.string   "ammount"
+    t.integer  "recipe_id"
+    t.integer  "item_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "ingredients", ["item_id"], :name => "index_ingredients_on_item_id"
+  add_index "ingredients", ["recipe_id"], :name => "index_ingredients_on_recipe_id"
 
   create_table "items", :force => true do |t|
     t.string   "name"
@@ -33,17 +37,6 @@ ActiveRecord::Schema.define(:version => 20120509172740) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
-
-  create_table "recipe_ingredients", :force => true do |t|
-    t.string   "ammount"
-    t.integer  "recipe_id"
-    t.integer  "ingredient_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "recipe_ingredients", ["ingredient_id"], :name => "index_recipe_ingredients_on_ingredient_id"
-  add_index "recipe_ingredients", ["recipe_id"], :name => "index_recipe_ingredients_on_recipe_id"
 
   create_table "recipes", :force => true do |t|
     t.string   "description"
