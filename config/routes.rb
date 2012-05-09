@@ -1,5 +1,7 @@
 Groggr::Application.routes.draw do
   
+  resources :items
+
   resources :drinks do
     resources :recipes
   end
