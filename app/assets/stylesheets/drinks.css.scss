@@ -68,6 +68,8 @@ $vibrant_sand_lighter: #FFEECC;
 #recipes {
 	$spacing_base: 10px;
 	
+	position: relative;
+	
 	.recipe {
 		height: 800px;
 	}
@@ -116,6 +118,11 @@ $vibrant_sand_lighter: #FFEECC;
 				width: 200px;
 			}
 		}
+	}
+	
+	.controls {
+		position: absolute;
+		bottom: 0;
 	}
 		
 }

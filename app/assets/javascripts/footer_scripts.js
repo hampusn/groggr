@@ -12,29 +12,5 @@
 //
 //= require jquery-1.7.1.min.js
 //= require idangerous.swiper-1.3.min.js
+//= require navigation.js.coffee
 
-(function($, window, document, undefined) {
-	$(function() {
-		
-		$('#menu-toggle').click(function(e) {
-			e.preventDefault();
-			$('#menu-container').slideToggle();
-		});
-		
-		var mySwiper = $('.swiper-container').swiper({speed:300, mode:'vertical'});
-		
-		$('#next-receipt').click(function(e) {
-			e.preventDefault();
-			mySwiper.swipeNext();
-
-		});
-		$('#prev-receipt').click(function(e) {
-			e.preventDefault();
-			mySwiper.swipePrev();
-
-		});
-	  
-		//$('.swiper-container').add('.swiper-slide').css('height', $(window).outerHeight());
-				
-	});
-})(jQuery, this, this.document);

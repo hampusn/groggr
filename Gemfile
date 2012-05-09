@@ -39,3 +39,5 @@ gem 'jquery-rails'
 
 gem 'haml'
 
+gem 'rails-i18n'
+

@@ -22,7 +22,7 @@
 			
 					.recipe-content
 						.ingredients
-							%h2 Ingredienser
+							%h2= t('ingredients')
 							%ul
 								- for i in 0..2
 									%li
@@ -31,7 +31,7 @@
 										%span.name Cognac
 			
 						.instructions 
-							%h2 Tillvägagångssätt
+							%h2= t('instructions')
 							= r.instruction
 				
 					%footer

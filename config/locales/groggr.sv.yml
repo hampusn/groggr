@@ -1,0 +1,16 @@
+# Swedish translations for Groggr.se.
+sv:
+  # Buttons, navigation and actions
+  previous: Föregående
+  prev: Föreg
+  next: Nästa
+  show: Visa
+  hide: Göm
+  edit: Redigera
+  delete: Radera
+  remove: Ta bort
+  back: Tillbaka
+  
+  #titles and headings
+  ingredients: Ingredienser
+  instructions: Instruktioner
