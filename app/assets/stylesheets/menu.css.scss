@@ -1,0 +1,63 @@
+// Dull Colors
+
+// Black with a hint of green
+$dull_black: #110000;
+// Dark foresty green
+$dull_green: #222211;
+// Beige with a dash of grey
+$dull_beige: #554422;
+// Yellowy orange citrus
+$dull_citrus: #EEAA22;
+// Light sandy beige
+$dull_sand: #CCAA88;
+
+
+// Vibrant
+
+// Black with a dash of green
+$vibrant_black: #111100;
+// Dark woody brown
+$vibrant_wood: #332211;
+// Light fiercy brown
+$vibrant_brown: #994411;
+// Yellow with a hint of orange
+$vibrant_yellow: #FFDD22;
+// Light Sand
+$vibrant_sand: #EEDDBB;
+$vibrant_sand_lighter: #FFEECC;
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	
+	#menu-container {
+		background: $vibrant_sand_lighter;
+		border-bottom: 3px solid $dull_beige;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+	}
+		ul {
+			margin: 0;
+		}
+		li {
+			display: inline-block;
+			padding: 4px 8px;
+		}
+		
+	#menu-toggle {
+		background: $vibrant_sand_lighter;
+		border: 3px solid $dull_beige;
+		border-top: 0;
+		color: $vibrant_black;
+		font-size: 20px;
+		margin-left: 10px;
+		padding: 5px 10px 8px;
+		position: relative;
+		top: 5px;
+	}
+}
+.js {
+	#menu-container { display: none; }
+}

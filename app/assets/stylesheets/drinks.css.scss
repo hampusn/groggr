@@ -1,0 +1,121 @@
+// Dull Colors
+
+// Black with a hint of green
+$dull_black: #110000;
+// Dark foresty green
+$dull_green: #222211;
+// Beige with a dash of grey
+$dull_beige: #554422;
+// Yellowy orange citrus
+$dull_citrus: #EEAA22;
+// Light sandy beige
+$dull_sand: #CCAA88;
+
+
+// Vibrant
+
+// Black with a dash of green
+$vibrant_black: #111100;
+// Dark woody brown
+$vibrant_wood: #332211;
+// Light fiercy brown
+$vibrant_brown: #994411;
+// Yellow with a hint of orange
+$vibrant_yellow: #FFDD22;
+// Light Sand
+$vibrant_sand: #EEDDBB;
+$vibrant_sand_lighter: #FFEECC;
+
+
+#drink {
+	background: $dull_black;
+	
+	$spacing_base: 10px;
+	
+	.img-container,
+	.drink-title,
+	.tag-container,
+	.description,
+	.controls {
+		color: $dull_sand;
+		margin-left: $spacing_base / 2;
+		margin-right: $spacing_base / 2;
+	}
+	
+	.img-container {
+		margin-bottom: $spacing_base;
+		overflow: hidden;
+		
+		img { max-width: 100%; }
+		
+	}
+	
+	.drink-title {
+		border-bottom: 2px groove rgba(255,255,255,.6);
+		color: $vibrant_sand;
+		font-family: 'Bitter', serif;
+		font-size: 70px;
+		font-weight: 700;
+		letter-spacing: 4px;
+		line-height: 1;
+		margin-bottom: $spacing_base;
+		padding-bottom: $spacing_base;
+		text-shadow: 3px 3px 0 $dull_black, 5px 5px 0 $dull_beige;
+		text-transform: uppercase;
+	}
+}
+
+#recipes {
+	$spacing_base: 10px;
+	
+	.recipe {
+		height: 800px;
+	}
+		.recipe-title,
+		h2 {
+		}
+		
+		.recipe-title {
+			font-size: 26px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		
+		h2 {
+			border-bottom: 2px groove $vibrant_sand_lighter;
+			color: $vibrant_wood;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 20px;
+			text-align: right;
+			padding-right: $spacing_base;
+			margin-top: $spacing_base;
+			margin-bottom: $spacing_base / 2;
+		}
+		
+	.recipe {
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		li {
+			font-size: 16px;
+			margin-bottom: 4px;
+			
+			span {
+				display: inline-block;
+			}
+			
+			.ammount {
+				width: 35px;
+				text-align: right;
+			}
+			.unit {
+				width: 25px;
+			}
+			.name {
+				width: 200px;
+			}
+		}
+	}
+		
+}

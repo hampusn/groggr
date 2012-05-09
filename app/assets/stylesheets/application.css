@@ -11,3 +11,51 @@
  *= require_self
  *= require_tree .
 */
+
+/* Sans serif */
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+@import url(http://fonts.googleapis.com/css?family=Spinnaker);
+@import url(http://fonts.googleapis.com/css?family=Allerta);
+@import url(http://fonts.googleapis.com/css?family=Federo);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Slab-ish */
+@import url(http://fonts.googleapis.com/css?family=Graduate);
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+/* Serif */
+@import url(http://fonts.googleapis.com/css?family=Prata);
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
+
+
+/*
+
+Color Schemes:
+
+dull
+
+#110000 Black with a hint of green
+#222211 Dark foresty green
+#554422 Beige with a dash of grey
+#EEAA22 Yellowy orange citrus
+#CCAA88 Light sandy beige
+
+vibrant	
+
+#111100 Black with a dash of green
+#332211 Dark woody brown
+#994411 Light fiercy brown
+#FFDD22 Yellow with a hint of orange
+#EEDDBB Light Sand
+
+
+*/
+
+
+html body { background: #EEDDBB; }
+body, body p, body ol, body ul { font-family: 'Open Sans', sans-serif; }
+
+
+.site-title {
+	display: none;
+}

@@ -1,0 +1,44 @@
+!!! 5
+!= '<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->'
+!= '<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->'
+!= '<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->'
+!= '<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->'
+
+%head
+	%meta{'charset' => 'utf-8'}
+	%meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}
+	%title
+		- if !@head_title.blank?
+			= @head_title
+			|
+		groggr
+	%meta{:name => 'description'}
+	%meta{:name => 'author'}
+	%meta{:name => 'viewport', :content => 'width=device-width,initial-scale=1'}
+	
+	= stylesheet_link_tag "application", :media => "all"
+	= javascript_include_tag :header_scripts
+	= csrf_meta_tags
+
+%body
+	#container
+		%header#header.cf
+			%h1.site-title groggr
+			= yield :header
+			= render 'partials/main_navigation'
+
+		%section#main.cf.row-fluid
+			= yield
+		
+		%footer#footer.cf
+			= yield :footer
+	
+	= javascript_include_tag :footer_scripts
+	
+	:javascript
+		var _gaq=[['_setAccount','UA-30615064-1'],['_trackPageview'],['_trackPageLoadTime']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+		
+!= '</html>'

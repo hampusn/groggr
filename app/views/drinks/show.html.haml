@@ -1,0 +1,49 @@
+%section#drink.span7
+	.img-container
+		= image_tag("/images/sidecar-cocktail-recipe.jpeg", :alt => "rss feed")
+	
+	%h1.drink-title= @drink.name
+	
+	.tag-container Taggar och skit
+	
+	%p.description= @drink.description
+	
+	%p.controls
+		= link_to t('edit'), edit_drink_path(@drink)
+		= link_to t('back'), drinks_path
+
+%aside#recipes.span5
+	.swiper-container
+		.swiper-wrapper
+			- @drink.recipes.each do |r|
+				%article.recipe.swiper-slide
+					%header
+						%h1.recipe-title= r.description
+			
+					.recipe-content
+						.ingredients
+							%h2 Ingredienser
+							%ul
+								- for i in 0..2
+									%li
+										%span.ammount 2
+										%span.unit oz.
+										%span.name Cognac
+			
+						.instructions 
+							%h2 Tillvägagångssätt
+							= r.instruction
+				
+					%footer
+						%p Metadata
+	
+	%footer.controls
+		= link_to t('next'), drink_path(@drink, anchor: 'next'), id: 'next-receipt'
+		= link_to t('previous'), drink_path(@drink, anchor: 'prev'), id: 'prev-receipt'
+		
+	
+
+
+
+
+
